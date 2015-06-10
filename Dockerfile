@@ -1,4 +1,4 @@
-FROM ubuntu:12.04
+FROM ubuntu:latest
 
 MAINTAINER BYUN Sangpil <sangpire@gmail.com>
 
@@ -9,6 +9,12 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y\
     vim-nox\
     curl\
     wget\
-    man
+    man\
+    zip\
+    git\
+    tree
+
+RUN mkdir -p /play
+WORKDIR /play
 
 CMD ["cat"]
